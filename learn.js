@@ -27,12 +27,12 @@ var target;
 var timeLeft;
 
 function setup() {
-  var canvas = createCanvas(640, 480);
-  canvas.position(130, 210);
-  video = createCapture(VIDEO);
-  video.hide();
-  poseNet = ml5.poseNet(video, modelLoaded);
-  poseNet.on('pose', gotPoses);
+    var canvas = createCanvas(640, 480);
+    canvas.position(130, 146);
+    video = createCapture(VIDEO);
+    video.hide();
+    poseNet = ml5.poseNet(video, modelLoaded);
+    poseNet.on("pose", gotPoses);
 
   imgArray[0] = new Image();
   imgArray[0].src = 'imgs/mountain.svg';
@@ -72,10 +72,10 @@ function setup() {
   };
   yogi.load(modelInfo, yogiLoaded);
 }
-  
-function yogiLoaded(){
-  console.log("Model ready!");
-  classifyPose();
+
+function yogiLoaded() {
+    console.log("Model ready!");
+    classifyPose();
 }
 
 function classifyPose(){
@@ -140,33 +140,33 @@ function gotResult(error, results) {
 
 
 function gotPoses(poses) {
-  if (poses.length > 0) {
-    pose = poses[0].pose;
-    skeleton = poses[0].skeleton;
-  }
+    if (poses.length > 0) {
+        pose = poses[0].pose;
+        skeleton = poses[0].skeleton;
+    }
 }
 
 function modelLoaded() {
-  document.getElementById("rectangle").style.display = "none";
-  console.log('poseNet ready');
+    document.getElementById("rectangle").style.display = "none";
+    console.log("poseNet ready");
 }
 
 function draw() {
-  push();
-  translate(video.width, 0);
-  scale(-1,1);
-  image(video, 0, 0, video.width, video.height);
-  
-  if (pose) {
-    for (let i = 0; i < skeleton.length; i++) {
-      let a = skeleton[i][0];
-      let b = skeleton[i][1];
-      strokeWeight(8);
-      stroke(244, 194, 194);
-      line(a.position.x, a.position.y, b.position.x, b.position.y);
+    push();
+    translate(video.width, 0);
+    scale(-1, 1);
+    image(video, 0, 0, video.width, video.height);
+
+    if (pose) {
+        for (let i = 0; i < skeleton.length; i++) {
+            let a = skeleton[i][0];
+            let b = skeleton[i][1];
+            strokeWeight(8);
+            stroke(244, 194, 194);
+            line(a.position.x, a.position.y, b.position.x, b.position.y);
+        }
     }
-  }
-  pop();
+    pop();
 }
 
 function nextPose(){
