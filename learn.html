@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #a293ff">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="src/p5.min.js"></script>
@@ -22,19 +22,21 @@
         <meta charset="utf-8" />
     </head>
 
-    <body>
+    <body style="background-color: #a293ff">
         <img
             src="imgs/blob3.svg"
             id="blob"
-            style="
-                position: absolute;
-                width: 600px;
-                height: 600px;
-                left: -210px;
-                top: -350px;
-            "
+            style="position: absolute; width: 545px; left: -210px; top: -350px"
         />
-        <h1 style="font-size: 100px; top: -30px">Learn</h1>
+        <h1
+            style="
+                font-size: 100px;
+                top: -65px;
+                -webkit-text-stroke: 0.05rem black;
+            "
+        >
+            Learn
+        </h1>
         <div
             id="rectangle"
             style="
@@ -82,7 +84,11 @@
             <h1
                 id="poseName"
                 class="child"
-                style="font-size: 100px; text-align: center"
+                style="
+                    font-size: 100px;
+                    text-align: center;
+                    -webkit-text-stroke: 0.05rem black;
+                "
             >
                 <span>Tree</span>
             </h1>
@@ -95,18 +101,30 @@
                 height: 340px;
                 position: absolute;
                 left: 950px;
-                top: 280px;
+                top: 240px;
             "
         />
-        <h1 style="font-size: 100px; top: 520px; left: 1000px">
+        <h1
+            style="
+                font-size: 100px;
+                top: 500px;
+                left: 1000px;
+                -webkit-text-stroke: 0.05rem black;
+            "
+        >
             <span id="time">00:10</span>
         </h1>
-        <h1 style="font-size: 40px; top: 630px; left: 960px">
+        <h1 style="font-size: 40px; top: 610px; left: 900px">
             seconds left to hold
         </h1>
         <div>
-            <a href="index.html" style="width: 150px"
-                ><indexbutton style="font-size: 40px; top: 740px"
+            <a href="index.html" style="width: 130px"
+                ><indexbutton
+                    style="
+                        font-size: 40px;
+                        top: 664px;
+                        background-color: #efbc97;
+                    "
                     >Back</indexbutton
                 ></a
             >
