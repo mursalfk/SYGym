@@ -1,175 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="imgs/meditation.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="imgs/meditation.png"
-        />
-        <title>Instructions</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
 
-    <body>
-        <h1 style="font-size: 100px; top: -30px">Learn Instructions</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/meditation.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/meditation.png" />
+    <title>Instructions</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-        <div>
-            <img
-                src="imgs/blob.svg"
-                style="
-                    position: absolute;
-                    width: 130px;
-                    height: 130px;
-                    top: 250px;
-                "
-            />
-        </div>
-        <div>
-            <img
-                src="imgs/blob1.svg"
-                style="
-                    position: absolute;
-                    width: 130px;
-                    height: 130px;
-                    top: 250px;
-                    left: 500px;
-                "
-            />
-        </div>
-        <div>
-            <img
-                src="imgs/blob2.svg"
-                style="
-                    position: absolute;
-                    width: 130px;
-                    height: 130px;
-                    top: 250px;
-                    left: 970px;
-                "
-            />
-        </div>
+<body>
+    <h1 style="  font-size: 100px;
+        top: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;">Learn Instructions</h1>
 
-        <div>
-            <h3
-                style="
-                    width: 60px;
-                    height: 60px;
-                    position: absolute;
-                    top: 245px;
-                "
-            >
-                1.
-            </h3>
-        </div>
-        <div>
-            <h3
-                style="
-                    width: 60px;
-                    height: 60px;
-                    position: absolute;
-                    top: 245px;
-                    left: 500px;
-                "
-            >
-                2.
-            </h3>
-        </div>
-        <div>
-            <h3
-                style="
-                    width: 60px;
-                    height: 60px;
-                    position: absolute;
-                    top: 245px;
-                    left: 970px;
-                "
-            >
-                3.
-            </h3>
-        </div>
 
-        <div class="instructions">
-            <div>
-                <p style="width: 290px; position: absolute; top: 380px">
-                    Accept camera access and wait for the webcam to load.
-                </p>
-            </div>
-            <div>
-                <p
-                    style="
-                        width: 290px;
-                        position: absolute;
-                        top: 380px;
-                        left: 550px;
-                    "
-                >
-                    Perform the same pose as the image on the right, making sure
-                    to face the same direction.
-                </p>
-            </div>
-            <div>
-                <p
-                    style="
-                        width: 290px;
-                        position: absolute;
-                        top: 380px;
-                        left: 1020px;
-                    "
-                >
-                    Hold for 10 seconds. <br />The timer will restart if you
-                    make a mistake. Make sure to complete all six poses. Enjoy!
-                </p>
-            </div>
-            <div><h3></h3></div>
+    <div class="buttons"
+        style="display: flex; flex-direction: column; align-items: center; max-height: 80vh; margin-top: 15vh;">
+        <p style="width: 80%; text-align: left; margin-bottom: 20px;">
+            1. Accept camera access and wait for the webcam to load.
+        </p>
+        <p style="width: 80%; text-align: left; margin-bottom: 20px;">
+            2. Perform the same pose as the image on the right, making sure to face the same direction.
+        </p>
+        <p style="width: 80%; text-align: left; margin-bottom: 20px;">
+            3. Hold for 10 seconds. The timer will restart if you
+            make a mistake. Make sure to complete all six poses. Enjoy!
+        </p>
+    </div>
+
+    <div class="buttons" style="margin-bottom: 30px">
+        <div>
+            <a href="index.html" style="width: 150px">
+                <indexbutton style="font-size: 40px; top: 669px">Back</indexbutton>
+            </a>
         </div>
-
-        <img
-            src=" imgs/allow.png"
-            style="position: absolute; top: 500px; left: 250px; height: 90px"
-        />
-        <img
-            src="imgs/yogaPose.png"
-            style="position: absolute; top: 383px; left: 840px; height: 200px"
-        />
-        <img
-            src="imgs/time.svg"
-            style="position: absolute; top: 347px; left: 1326px; height: 100px"
-        />
-
-        <div class="buttons" style="margin-bottom: 30px">
-            <div>
-                <a href="index.html" style="width: 150px">
-                    <indexbutton style="font-size: 40px; top: 669px"
-                        >Back</indexbutton
-                    >
-                </a>
-            </div>
-            <div></div>
-            <div>
-                <a href="learn.html" style="width: 150px">
-                    <indexbutton
-                        style="
+        <div></div>
+        <div>
+            <a href="learn.html" style="width: 150px">
+                <indexbutton style="
                             font-size: 40px;
                             left: 1100px;
                             top: 669px;
                             background: #5749ae;
-                        "
-                    >
-                        <span>Start</span>
-                        <span>&#x279c;</span>
-                    </indexbutton>
-                </a>
-            </div>
-            <div></div>
+                        ">
+                    <span>Start</span>
+                    <span>&#x279c;</span>
+                </indexbutton>
+            </a>
         </div>
-    </body>
+        <div></div>
+    </div>
+</body>
+
 </html>

@@ -242,7 +242,7 @@ indexbutton:hover{
 /* Common styles for all screen sizes */
 .about h1 {
   font-size: 100px;
-  top: -30px;
+  top: 0px;
   position: absolute;
   left: 0;
   right: 0;
