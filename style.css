@@ -199,8 +199,9 @@ indexbutton:hover{
   position: absolute;
   font-size: 23px;
   width: 1320px;
-  top: 280px;
-  left: 70px;
+  top: 160px;
+  left: 40px;
+  line-height: 35px;
 }
 /* Mobile-friendly styles */
 
