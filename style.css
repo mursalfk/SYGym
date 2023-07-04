@@ -200,8 +200,9 @@ indexbutton:hover{
   font-size: 23px;
   width: 1320px;
   top: 160px;
-  left: 40px;
+  left: 50%;
   line-height: 35px;
+  transform: translateX(-50%);
 }
 /* Mobile-friendly styles */
 
