@@ -4,18 +4,19 @@ let pose;
 let skeleton;
 
 let brain;
-let poseLabel = "Y";
+let poseLabel = "0";
 
 function setup() {
     createCanvas(640, 480);
     video = createCapture(VIDEO);
     video.hide();
+    // let poseNetOptions = { architecture: "ResNet50" };
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on("pose", gotPoses);
 
     let options = {
         inputs: 34,
-        outputs: 4,
+        outputs: 2,
         task: "classification",
         debug: true,
     };
@@ -49,7 +50,7 @@ function classifyPose() {
 }
 
 function gotResult(error, results) {
-    if (results[0].confidence > 0.75) {
+    if (results[0].confidence > 0.9) {
         poseLabel = results[0].label.toUpperCase();
     }
     //console.log(results[0].confidence);
@@ -82,7 +83,7 @@ function draw() {
 
             line(a.position.x, a.position.y, b.position.x, b.position.y);
         }
-        for (let i = 0; i < pose.keypoints.length; i++) {
+        for (let i = 5; i < pose.keypoints.length; i++) {
             let x = pose.keypoints[i].position.x;
             let y = pose.keypoints[i].position.y;
             fill(0);

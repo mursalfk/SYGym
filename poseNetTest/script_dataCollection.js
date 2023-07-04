@@ -20,7 +20,7 @@ function keyPressed() {
             setTimeout(function () {
                 console.log("not collecting");
                 state = "waiting";
-            }, 10000);
+            }, 20000);
         }, 10000);
     }
 }
@@ -30,12 +30,13 @@ function setup() {
 
     video = createCapture(VIDEO);
     video.hide();
+    // let poseNetOptions = { architecture: "ResNet50" };
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on("pose", gotPoses);
 
     let options = {
         inputs: 34,
-        outputs: 4,
+        outputs: 2,
         task: "classification",
         debug: true,
     };
@@ -63,6 +64,7 @@ function gotPoses(poses) {
 
 function modelLoaded() {
     console.log("poseNet ready");
+    // console.log(poseNet);
 }
 
 function draw() {
@@ -79,7 +81,7 @@ function draw() {
 
             line(a.position.x, a.position.y, b.position.x, b.position.y);
         }
-        for (let i = 0; i < pose.keypoints.length; i++) {
+        for (let i = 5; i < pose.keypoints.length; i++) {
             let x = pose.keypoints[i].position.x;
             let y = pose.keypoints[i].position.y;
             fill(0);

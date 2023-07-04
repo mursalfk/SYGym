@@ -4,7 +4,7 @@ function setup() {
     createCanvas(640, 480);
     let options = {
         inputs: 34,
-        outputs: 4,
+        outputs: 2,
         task: "classification",
         debug: true,
     };
