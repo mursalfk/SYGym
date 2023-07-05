@@ -153,9 +153,17 @@ function draw() {
         for (let i = 0; i < skeleton.length; i++) {
             let a = skeleton[i][0];
             let b = skeleton[i][1];
-            strokeWeight(8);
-            stroke(244, 194, 194);
+            strokeWeight(2);
+            stroke(255);
+
             line(a.position.x, a.position.y, b.position.x, b.position.y);
+        }
+        for (let i = 5; i < pose.keypoints.length; i++) {
+            let x = pose.keypoints[i].position.x;
+            let y = pose.keypoints[i].position.y;
+            fill(0);
+            stroke(255);
+            ellipse(x, y, 16, 16);
         }
     }
     pop();
@@ -167,6 +175,7 @@ function nextPose() {
         document.getElementById("finish").textContent = "Amazing!";
         document.getElementById("welldone").textContent = "All poses done.";
         document.getElementById("sparkles").style.display = "block";
+        document.getElementById("time").textContent = "00:" + "00";
     } else {
         console.log("Well done, you all poses!");
         //var stars = document.getElementById("starsid");

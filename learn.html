@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" style="background-color: #a293ff">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="src/p5.min.js"></script>
+        <script src="src/ml5.min.js"></script>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="imgs/meditation.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="imgs/meditation.png"
+        />
+        <title>SYGym</title>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="utf-8" />
+    </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="src/p5.min.js"></script>
-    <script src="src/ml5.min.js"></script>
-    <script src="learn.js"></script>
-    <link rel="icon" type="image/png" sizes="32x32" href="imgs/meditation.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="imgs/meditation.png" />
-    <title>SYGym</title>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="utf-8" />
-</head>
-
-<body style="background-color: #a293ff">
-    <h1 style="
+    <body style="background-color: #a293ff">
+        <h1
+            style="
                 font-size: 100px;
                 top: -65px;
                 -webkit-text-stroke: 0.05rem black;
-            ">
-        Learn
-    </h1>
-    <div id="rectangle" style="
+            "
+        >
+            Learn
+        </h1>
+        <div
+            id="rectangle"
+            style="
                 width: 640px;
                 height: 480px;
                 margin-left: 80px;
@@ -37,10 +49,14 @@
                     'Helvetica Neue', sans-serif;
                 color: white;
                 display: block;
-            ">
-        Loading...
-    </div>
-    <img src="imgs/sparkles.svg" id="sparkles" style="
+            "
+        >
+            Loading...
+        </div>
+        <img
+            src="imgs/sparkles.svg"
+            id="sparkles"
+            style="
                 top: 65px;
                 left: 800px;
                 position: absolute;
@@ -48,45 +64,65 @@
                 height: 107px;
                 z-index: 1;
                 display: none;
-            " />
-    <h1 id="finish" style="font-size: 50px; top: -20px; left: 910px; position: absolute"></h1>
-    <h1 id="welldone" style="font-size: 50px; top: 35px; left: 910px; position: absolute"></h1>
-    <div class="parent">
-        <h1 id="poseName" class="child" style="
+            "
+        />
+        <h1
+            id="finish"
+            style="font-size: 50px; top: -20px; left: 910px; position: absolute"
+        ></h1>
+        <h1
+            id="welldone"
+            style="font-size: 50px; top: 35px; left: 910px; position: absolute"
+        ></h1>
+        <div class="parent">
+            <h1
+                id="poseName"
+                class="child"
+                style="
                     font-size: 100px;
                     text-align: center;
                     -webkit-text-stroke: 0.05rem black;
-                ">
-            <span>Tree</span>
-        </h1>
-    </div>
-    <img id="poseImg" src="imgs/mountain.svg" style="
+                "
+            >
+                <span>Tree</span>
+            </h1>
+        </div>
+        <img
+            id="poseImg"
+            src="imgs/mountain.svg"
+            style="
                 width: 340px;
                 height: 340px;
                 position: absolute;
                 left: 950px;
                 top: 240px;
-            " />
-    <h1 style="
+            "
+        />
+        <h1
+            style="
                 font-size: 100px;
                 top: 500px;
                 left: 1000px;
                 -webkit-text-stroke: 0.05rem black;
-            ">
-        <span id="time">00:10</span>
-    </h1>
-    <h1 style="font-size: 40px; top: 610px; left: 900px">
-        seconds left to hold
-    </h1>
-    <div>
-        <a href="index.html" style="width: 130px">
-            <indexbutton style="
+            "
+        >
+            <span id="time">00:10</span>
+        </h1>
+        <h1 style="font-size: 40px; top: 610px; left: 900px">
+            seconds left to hold
+        </h1>
+        <div>
+            <a href="index.html" style="width: 130px">
+                <indexbutton
+                    style="
                         font-size: 40px;
                         top: 664px;
                         background-color: #efbc97;
-                    ">Back</indexbutton>
-        </a>
-    </div>
-</body>
-
+                    "
+                    >Back</indexbutton
+                >
+            </a>
+        </div>
+    </body>
+    <script src="learn.js"></script>
 </html>
